@@ -1,0 +1,8 @@
+h1{
+	padding-top: 20px;
+}
+body{
+	background-image:url("image.png");
+	object-fit: cover;
+ height: 100px;
+}
