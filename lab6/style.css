@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --success-color: #2ecc71;
+    --error-color: #e74c3c;
+    --checkmark-color: #43b324;
+}
+
+body {
+    background-color: #f9f8fb;
+    font-family: 'Poppins',
+        sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 120px;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 16.83px 0.17px rgba(0, 0, 0, .05);
+    -webkit-box-shadow: 0 15px 16.83px 0.17px rgba(0, 0, 0, .05);
+    width: 900px;
+    max-width: 1200px;
+    padding: 30px;
+    display: flex;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #222;
+    margin: 0 0 30px;
+
+}
+
+.column1,
+.column2 {
+    width: 50%;
+}
+
+.column2 .signup-image {
+    max-width: 110%;
+}
+
+.column2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    padding: 30px 50px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 25px;
+    position: relative;
+}
+
+.form-control label {
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control input {
+    font-family: 'Poppins',
+        sans-serif;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.form-control:after {
+    content: '\2713';
+    font-size: 1.5rem;
+    opacity: 0;
+    color: var(--checkmark-color);
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-30%);
+    transition: all ease .4s;
+}
+
+.form-control input:focus {
+    outline: none;
+    border-color: #777;
+}
+
+.form-control.success input {
+    border-color: var(--success-color);
+}
+
+.form-control.error input {
+    border-color: var(--error-color);
+}
+
+.form-control.success:after {
+    opacity: 1;
+    transform: translateY(-50%);
+}
+
+.form-control small {
+    color: var(--error-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control.error small {
+    visibility: visible;
+}
+
+button {
+    cursor: pointer;
+    background: #6dabe4;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    padding: 15px 39px;
+    margin-top: 20px;
+    transition: all ease .25s;
+}
+
+button:hover {
+    background: #4292dc;
+}
+
+@media screen and (max-width: 960px) {
+
+    body {
+        padding: 80px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .column1,
+    .column2 {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    .form-control input {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    button {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+
+    .form {
+        padding: 30px 20px;
+    }
+
+    .form-control {
+        margin-bottom: 5px;
+        padding-bottom: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+body {
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: linear-gradient(315deg, rgb(141, 106, 247) 3%, rgb(237, 202, 28) 38%, rgb(31, 145, 137) 68%, rgb(210, 30, 30) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
